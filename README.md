@@ -1,16 +1,14 @@
 # Run the application
 
-First start the poetry shell:
+First install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
-poetry shell
+When running for the first time, run
 
-When running for the first time, install dependencies
+uv sync
 
-poetry install
+then to run the app, run
 
-Then use the following command to run the app (debug arg optional)
-
-flask --app secret_santa run (--debug)
+uv run flask --app secret_santa run
 
 ## Initialising the database
 
@@ -27,12 +25,12 @@ This will also clear any existing tables and add new ones, so will delete any ex
 
 To run the tests, run:
 
-pytest
+uv run pytest
 
 To run test coverage, run:
 
-coverage run -m pytest
+uv run coverage run -m pytest
 
-coverage report
+uv run coverage report
 
-coverage html
+uv run coverage html
