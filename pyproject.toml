@@ -16,6 +16,7 @@ dependencies = [
     "coverage>=7.6.1,<8",
     "sendgrid>=6.11.0,<7",
     "dotenv>=0.9.9",
+    "resend>=2.11.0",
 ]
 
 [build-system]

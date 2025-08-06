@@ -28,7 +28,7 @@ def init_db_command():
     with current_app.app_context():
         config_file_path = os.path.join(current_app.instance_path, "user-config.ini")
         configParser.read(config_file_path)
-        #print(configParser.get("event.details", "EVENT_TITLE"))
+        # print(configParser.get("event.details", "EVENT_TITLE"))
 
         # get the admin user details and add the admin user
         email = configParser.get("admin.user", "EMAIL")

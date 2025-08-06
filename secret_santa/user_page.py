@@ -5,10 +5,11 @@ from werkzeug.exceptions import abort
 
 from secret_santa.auth import login_required
 from secret_santa.db import get_db
-from secret_santa.sendgrid_email import send_email
+from secret_santa.resend_email import ResendEmailSender
 
 
 bp = Blueprint("user_page", __name__, url_prefix="/user")
+email_sender = ResendEmailSender()
 
 
 @bp.route("/")
@@ -33,7 +34,7 @@ def update(user_id):
     user = get_user(user_id)
 
     if request.method == "POST":
-        email = request.form['email']
+        email = request.form["email"]
         address = request.form["address"]
         dietary_info = request.form["dietary_info"]
         error = None
@@ -86,8 +87,7 @@ def send_info(user_id):
         + dietary_info
         + "."
     )
-
-    send_email(email, msg)
+    email_sender.send_email(email, msg)
 
     return render_template("user_page/index.html", user_info=user)
 
