@@ -38,7 +38,7 @@ def init_db_command():
         # get the event details and add to database
         event_params = dict(configParser["event.details"])
         add_event(event_params)
-    click.echo("Initialized the database.")
+    click.echo("Initialised the database.")
 
 
 @click.command("add-user")

@@ -35,5 +35,5 @@ def test_init_db_command(app, runner, monkeypatch):
     with app.app_context():
         monkeypatch.setattr("secret_santa.db.init_db", fake_init_db)
         result = runner.invoke(args=["init-db"])
-        assert "My Secret Santa Event" in result.output
+        assert "Initialised the database" in result.output
         assert Recorder.called_init_db
