@@ -28,7 +28,7 @@ def init_db_command():
     with current_app.app_context():
         config_file_path = os.path.join(current_app.instance_path, "user-config.ini")
         configParser.read(config_file_path)
-        print(configParser.get("event.details", "EVENT_TITLE"))
+        #print(configParser.get("event.details", "EVENT_TITLE"))
 
         # get the admin user details and add the admin user
         email = configParser.get("admin.user", "EMAIL")
@@ -38,7 +38,7 @@ def init_db_command():
         # get the event details and add to database
         event_params = dict(configParser["event.details"])
         add_event(event_params)
-    click.echo("Initialized the database.")
+    click.echo("Initialised the database.")
 
 
 @click.command("add-user")
@@ -101,7 +101,7 @@ def add_event(event_params):
         "INSERT INTO event (user_id, event_title, draw_date, event_date, "
         + "event_description, cost) VALUES (?, ?, ?, ?, ?, ?)",
         (
-            event_params["event_owner_id"],
+            1,
             event_params["event_title"],
             event_params["draw_date"],
             event_params["event_date"],
