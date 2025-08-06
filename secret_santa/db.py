@@ -36,7 +36,7 @@ def init_db_command():
         add_user("admin", email, password)
 
         # get the event details and add to database
-        event_params = dict(configParser["section"])
+        event_params = dict(configParser["event.details"])
         add_event(event_params)
     click.echo("Initialized the database.")
 
@@ -101,12 +101,12 @@ def add_event(event_params):
         "INSERT INTO event (user_id, event_title, draw_date, event_date, "
         + "event_description, cost) VALUES (?, ?, ?, ?, ?, ?)",
         (
-            event_params["user_id"],
-            event_params["EVENT_TITLE"],
-            event_params["DRAW_DATE"],
-            event_params["EVENT_DATE"],
-            event_params["EVENT_DESCRIPTION"],
-            event_params["COST"],
+            event_params["event_owner_id"],
+            event_params["event_title"],
+            event_params["draw_date"],
+            event_params["event_date"],
+            event_params["event_description"],
+            event_params["cost"],
         ),
     )
     db.commit()
