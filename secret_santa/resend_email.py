@@ -1,4 +1,5 @@
 """Resend email sender implementation."""
+
 import os
 import resend
 from dotenv import load_dotenv
