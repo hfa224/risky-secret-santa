@@ -17,9 +17,9 @@ the admin email and password to your own values first.
 
 The following command initialises the database and adds an admin user and an event using the values in the user-cofig.ini file:
 
-flask --app secret_santa init-db
+uv run flask --app secret_santa init-db
 
-This will also clear any existing tables and add new ones, so will delete any exisisting data.
+This will also clear any existing tables and add new ones, so will delete any existing data.
 
 ## Email
 
