@@ -472,6 +472,19 @@ wheels = [
 ]
 
 [[package]]
+name = "resend"
+version = "2.11.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/a6/72a58e10bf3d4d3bf529daaa54296eae7252970eb4bfe6dd2a0bbc6c584d/resend-2.11.0.tar.gz", hash = "sha256:b85e526ccb3fa7432aead57f6cc137435c34b19d354be4cd2deba321dd9a4860", size = 15161, upload-time = "2025-07-10T01:52:47.364Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/57/2f/ed950bdf3aa6f167d510e484ba7a9792317ec9e5a1b807ba571269b01b9a/resend-2.11.0-py2.py3-none-any.whl", hash = "sha256:fefa22ae5c5c79aca706ce018c89f9fe181148ad368fac2f1b4a899e4608f117", size = 21564, upload-time = "2025-07-10T01:52:45.814Z" },
+]
+
+[[package]]
 name = "rsa"
 version = "4.9"
 source = { registry = "https://pypi.org/simple" }
@@ -497,6 +510,7 @@ dependencies = [
     { name = "google-auth-oauthlib" },
     { name = "pytest" },
     { name = "python-dotenv" },
+    { name = "resend" },
     { name = "sendgrid" },
 ]
 
@@ -511,6 +525,7 @@ requires-dist = [
     { name = "google-auth-oauthlib", specifier = ">=1.1.0,<2" },
     { name = "pytest", specifier = ">=8.3.2,<9" },
     { name = "python-dotenv", specifier = ">=1.0.1,<2" },
+    { name = "resend", specifier = ">=2.11.0" },
     { name = "sendgrid", specifier = ">=6.11.0,<7" },
 ]
 
@@ -532,6 +547,15 @@ name = "starkbank-ecdsa"
 version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/a3/f8/a6091be6a60ed4df9ac806c89fbc5fe1a3416d0284f3ba70aa09a3419428/starkbank-ecdsa-2.2.0.tar.gz", hash = "sha256:9399c3371b899d4a235b68a1ed7919d202fbf024bd2c863ae8ebdad343c2a63a", size = 14690, upload-time = "2022-10-24T18:36:05.27Z" }
+
+[[package]]
+name = "typing-extensions"
+version = "4.14.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz", hash = "sha256:38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36", size = 107673, upload-time = "2025-07-04T13:28:34.16Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b5/00/d631e67a838026495268c2f6884f3711a15a9a2a96cd244fdaea53b823fb/typing_extensions-4.14.1-py3-none-any.whl", hash = "sha256:d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76", size = 43906, upload-time = "2025-07-04T13:28:32.743Z" },
+]
 
 [[package]]
 name = "uritemplate"

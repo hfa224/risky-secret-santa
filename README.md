@@ -17,9 +17,17 @@ the admin email and password to your own values first.
 
 The following command initialises the database and adds an admin user and an event using the values in the user-cofig.ini file:
 
-flask --app secret_santa init-db
+uv run flask --app secret_santa init-db
 
-This will also clear any existing tables and add new ones, so will delete any exisisting data.
+This will also clear any existing tables and add new ones, so will delete any existing data.
+
+## Email
+
+In order to set up email sending with resend, you will need a resend API key. When you have one, put a .env file with the following
+fields in the root folder of the project:
+
+RESEND_API_KEY=[the generated resend API key]
+FROM_EMAIL=[the sender email - must be registered with resend]
 
 ## Testing
 
