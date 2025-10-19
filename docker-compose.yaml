@@ -1,0 +1,12 @@
+name: risky_secret_santa
+
+services:
+  secret_santa:
+    image: h_adams/risky_secret_santa:1.0.0
+    ports:
+      - "8084:8080"
+    volumes:
+      - db-data:/instance
+
+volumes:
+  db-data:

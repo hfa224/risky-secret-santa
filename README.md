@@ -10,6 +10,16 @@ then to run the app, run
 
 uv run flask --app secret_santa run
 
+to run for production, run
+
+uv run waitress-serve --port=80 --call "secret_santa:create_app"
+
+## Running with docker
+
+To build the docker image
+
+docker build . -t h_adams/risky_secret_santa:1.0.0
+
 ## Initialising the database
 
 Before initialising the database, check the set up values in the instance/user-config.ini file. You must update
